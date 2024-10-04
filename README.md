@@ -8,3 +8,7 @@
 **За распространение ссылок или файлов без согласования с писавшими наказание-порча на понос**
 
 Ссылка на дискорд-сервер, в котором будут проводиться сессии совместного кодинга: https://discord.gg/EWyHcGYtbV. В этом же сервере можно будет задать вопросы, на которые остальные постараются ответить
+
+Здесь можно задать вопросы и оставить заявки на разбор по курсам:
+https://docs.google.com/document/d/1x8uBnw4u0mXeNxLVi1dYcZgnoPrE4nWV8mFNbHTTEgQ/edit?usp=sharing -- питон
+https://docs.google.com/document/d/1JLE8DETZY0vZrV2sM9v55NJ2fwEKLrMSW4MR6Kw3lio/edit?usp=sharing -- машинное обучение
