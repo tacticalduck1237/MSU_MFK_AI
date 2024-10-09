@@ -26,6 +26,6 @@ x_test = sc.transform(x_test)
 clf.fit(X_train, y_train)
 
 # Оценка качества получившегося решения
-clf.score(x_test, y_test)
+print(clf.score(x_test, y_test))
 
 #Ответ 0.98
