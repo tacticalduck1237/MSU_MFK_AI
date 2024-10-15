@@ -1,9 +1,6 @@
 s = open('input.txt')
-c = s.readlines()
-b = ''.join(c)
-a = b.split("\n")
-stripped_lines= [line.strip() for line in a]
-filtered_lines = [line for line in stripped_lines if 'ё' in line]
-d = '\n'.join(filtered_lines)
+c = s.read()
+filtered_words = [word for word in c.split() if 'ё' in word]
+d = '\n'.join(filtered_words)
 print(d)
 s.close()
