@@ -1,0 +1,6 @@
+s=str(input())
+a=s.replace("-","")
+b=a.replace("(", "")
+c=b.replace(")","")
+d=c.replace(" ","")
+print(d)
