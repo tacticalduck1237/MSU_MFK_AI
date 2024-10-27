@@ -1,6 +1,6 @@
 #ссылка на ноутбук https://colab.research.google.com/drive/1ZD6UuuUmUKIyF0lTES0-nL6RpCZD8htf?usp=sharing
 
-#ПРОРЕШАННЫЙ НОУТБУК
+#ПРОРЕШАННЫЙ НОУТБУК (Прорешала Катя трошкина, потому что я дурачок и сделал тупую ошибку)
 with open('input.txt') as file:
     for s in file:
         g = s.split()
