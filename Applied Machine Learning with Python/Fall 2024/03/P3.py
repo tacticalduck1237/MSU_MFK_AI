@@ -18,3 +18,4 @@ class KNN_classifier:
             predictions.append(most_common)
         predictions = np.array(predictions)
         return predictions
+        

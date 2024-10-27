@@ -38,4 +38,4 @@ plt.show()
 
 optimal_k = k_values[np.argmax(mean_scores)]
 print(optimal_k)
-#Ответ:евклидово расстояние
+#Ответ: евклидово расстояние
