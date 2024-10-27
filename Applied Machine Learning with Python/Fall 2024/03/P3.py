@@ -1,3 +1,4 @@
+#ссылка на ноутбук https://colab.research.google.com/drive/1SPAf-RnYNB9iiJWDsvDKfi-Qs7qOrM12?usp=sharing
 import numpy as np
 class KNN_classifier:
     def __init__(self, n_neighbors: int, **kwargs):
