@@ -1,15 +1,7 @@
-s=open('input.txt')
-a=s.readlines()
-n=len(a)
-i=0
-minlist=[]
-while i<n:
-    b=a[i].strip()
-    b=b.split(" ")
-    i+=1
-    minimal=float(min(b))
-    minlist.append(minimal)
-    maximum=max(minlist)
-print(f"{maximum:.3f}")
-s.close()
-
+N = int(input())
+min_values = []
+for _ in range(N):
+    numbers = list(map(float, input().split()))
+    min_values.append(min(numbers))
+result = max(min_values)
+print(f"{result:.3f}")

@@ -1,18 +1,3 @@
-#s=open('input.txt')
-s=str(input())
-#c = s.read()
-#d=c.split(" ")
-d=s.split(" ")
-b1=float(d[0])
-q=float(d[1])
-n=int(d[2])
-t=b1
-t1=0
-a=0
-while a<n:
-    a+=1
-    t=b1*q**(a-1)
-    t1+=t
-print(f"{t1:.3f}")
-#s.close()
-#закомментирован ввод через файл, если хотите его-надо раскомментировать и стереть строку 5
+b1, q, N = map(float, input().split())
+S = b1 * (1 - q**N) / (1 - q) if q != 1 else b1 * N
+print(f"{S:.3f}")

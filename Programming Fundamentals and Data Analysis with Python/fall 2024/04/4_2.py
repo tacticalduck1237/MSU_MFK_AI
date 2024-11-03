@@ -1,15 +1,16 @@
-a=open('input.txt')
-c = a.readlines()
-d="/".join(c)
-d=d.replace('\n',"")
-d=d.split("/")
-h=0
-i=0
-t=0
-q=len(d)
-for h in d:
-    n=int(h)
-    if n != 0:
-        i+=1
-        t+=n
-print(i, t)
+count = 0
+total_sum = 0
+
+while True:
+    number = int(input())
+    if number == 0:
+        break
+
+    binary_representation = bin(number)[2:]
+    zero_count = binary_representation.count('0')
+
+    if zero_count == 3:
+        count += 1
+        total_sum += number
+
+print(count, total_sum)
