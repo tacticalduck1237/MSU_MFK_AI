@@ -1,6 +1,7 @@
 #ссылка на ноутбук https://colab.research.google.com/drive/1aacy0NIewvsFfa91n251ar5RzmCz3vDe?usp=sharing
 
-#ПРОРЕШАННЫЙ НОУТБУК (пока неправильно)
+#ПРОРЕШАННЫЙ НОУТБУК
+
 import numpy as np
 
 np.random.seed(42)
@@ -11,9 +12,11 @@ def gradient(y_true: int, y_pred: float, x: np.array) -> np.array:
     Вычисляет градиент по параметрам модели для одного объекта x.
     y_true - истинное значение ответа для объекта x
     y_pred - предсказанное значение модели для класса 1
-    x - вектор признаков объекта с добавленным коэффициентом 1 для bias
+    x - вектор признаков объекта, без добавления bias
     """
-    grad = (y_pred - y_true) * x  # Calculate the gradient vector
+    # Concatenate x with a 1 for the bias at the end, matching alpha structure
+    x_with_bias = np.append(x, 1)  # Add bias as the last element of x
+    grad = (y_pred - y_true) * x_with_bias
     return grad
 
 
@@ -38,16 +41,15 @@ def train(
     lr - learning rate
     num_epoch - количество эпох обучения
     """
-    # Добавляем единичный столбец к x_train для учета bias в расчетах
-    x_train = np.hstack((np.ones((x_train.shape[0], 1)), x_train))
-    
     alpha = alpha0.copy()
     for epo in range(num_epoch):
         for i, x in enumerate(x_train):
             # Use the logistic (sigmoid) function for prediction
-            y_pred = 1 / (1 + np.exp(-np.dot(alpha, x)))
+            linear_combination = np.dot(alpha[:-1], x) + alpha[-1]  # Separate bias term
+            y_pred = 1 / (1 + np.exp(-linear_combination))
+            
             # Calculate gradient
             grad = gradient(y_train[i], y_pred, x)
-            # Update model parameters
+			# Update model parameters
             alpha = update(alpha, grad, lr)
     return alpha
