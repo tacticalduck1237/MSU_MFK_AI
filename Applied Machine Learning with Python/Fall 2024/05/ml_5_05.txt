@@ -1,0 +1,3 @@
+SVC (support vectors classification)
+
+SVR (support vectors regression)
