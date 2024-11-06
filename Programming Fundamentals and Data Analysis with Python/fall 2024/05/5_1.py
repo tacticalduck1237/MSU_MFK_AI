@@ -1,0 +1,1 @@
+sss=open('input.txt')
