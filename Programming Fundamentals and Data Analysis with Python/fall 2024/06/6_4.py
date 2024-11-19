@@ -1,8 +1,11 @@
 from collections import Counter
+
 def least_frequent(List):
     occurrence_count = Counter(List)
-    # Get all elements sorted by frequency (ascending order) and pick the first
-    least_common = occurrence_count.most_common()[-1]
+    # Sort by frequency, then by number
+    least_common = sorted(occurrence_count.items(), key=lambda x: (x[1], x[0]))[0]
     return least_common[0]
-List=list(input())
+
+# Read input and convert it into a list of integers
+List = list(map(int, input()))
 print(least_frequent(List))
