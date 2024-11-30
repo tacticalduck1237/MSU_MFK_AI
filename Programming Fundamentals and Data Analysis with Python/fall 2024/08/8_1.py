@@ -1,16 +1,12 @@
 import numpy as np
 
-a = open('input.txt')
-q = []
-b = a.readlines()
-b = [x.strip() for x in b]
-for line in b:
-    q.append([x for x in line.split(' ')])
+# Read the matrix from the input file
+matrix = np.loadtxt('input.txt', dtype=float)
 
-matrix = np.array(q, dtype=float)  # Ensure data is treated as floats
-matrix_t = matrix.transpose()
+# Transpose the matrix
+matrix_t = matrix.T
 
-# Print the matrix in the desired format
+# Print the transposed matrix in the required format
 print("[", end="")
 for i, row in enumerate(matrix_t):
     if i > 0:
@@ -19,4 +15,3 @@ for i, row in enumerate(matrix_t):
     if i != len(matrix_t) - 1:
         print()
 print("]")
-a.close()
