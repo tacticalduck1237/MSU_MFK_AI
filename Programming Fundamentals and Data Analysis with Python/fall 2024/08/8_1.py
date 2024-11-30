@@ -1,21 +1,22 @@
 import numpy as np
 
-# Read the input file
-with open('input.txt') as a:
-    q = []
-    b = a.readlines()
-    b = [x.strip() for x in b]
-    for line in b:
-        q.append([float(x) for x in line.split()])  # Convert to float for numerical data
+a = open('input.txt')
+q = []
+b = a.readlines()
+b = [x.strip() for x in b]
+for line in b:
+    q.append([x for x in line.split(' ')])
 
-# Convert to NumPy array
-matrix = np.array(q)
-
-# Transpose the matrix
+matrix = np.array(q, dtype=float)  # Ensure data is treated as floats
 matrix_t = matrix.transpose()
 
-# Print the transposed matrix in the desired format
+# Print the matrix in the desired format
 print("[", end="")
-for row in matrix_t:
-    print("[" + " ".join(f"{x:.1f}" for x in row) + "]", end="")
+for i, row in enumerate(matrix_t):
+    if i > 0:
+        print(" ", end="")
+    print("[" + " ".join(f"{x: .1f}" for x in row) + "]", end="")
+    if i != len(matrix_t) - 1:
+        print()
 print("]")
+a.close()
