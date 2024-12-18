@@ -1,0 +1,6 @@
+                            KMeans      Дендрограмма    Некорректно
+s_c.hierarchy.dendrogram                тык сюда
+scipy.dendrogram                                        тык сюда
+sk_c.dendrogram                                         тык сюда
+sk_c.KMeans                 тык сюда    
+sklearn.kmeans                                          тык сюда
